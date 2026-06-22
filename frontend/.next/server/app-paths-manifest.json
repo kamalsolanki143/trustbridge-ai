@@ -1,0 +1,17 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/borrower/consent/page": "app/borrower/consent/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/borrower/page": "app/borrower/page.js",
+  "/borrower/readiness/page": "app/borrower/readiness/page.js",
+  "/lender/manual-review/page": "app/lender/manual-review/page.js",
+  "/borrower/trust-summary/page": "app/borrower/trust-summary/page.js",
+  "/borrower/outcome-simulator/page": "app/borrower/outcome-simulator/page.js",
+  "/lender/page": "app/lender/page.js",
+  "/lender/policy-layer/page": "app/lender/policy-layer/page.js",
+  "/lender/applications/page": "app/lender/applications/page.js",
+  "/borrower/roadmap/page": "app/borrower/roadmap/page.js",
+  "/lender/readiness-analysis/page": "app/lender/readiness-analysis/page.js",
+  "/page": "app/page.js",
+  "/lender/simulator/page": "app/lender/simulator/page.js"
+}
