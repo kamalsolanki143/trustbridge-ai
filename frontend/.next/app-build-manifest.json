@@ -1,0 +1,131 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-a3c37fcbf859f6f9.js",
+      "static/chunks/fd9d1056-b11b2651f33aae7f.js",
+      "static/chunks/117-4f5b424f20efdcae.js",
+      "static/chunks/main-app-cf3c8e9bbf37ec7a.js",
+      "static/chunks/app/_not-found/page-221ef7203edcd7a2.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-a3c37fcbf859f6f9.js",
+      "static/chunks/fd9d1056-b11b2651f33aae7f.js",
+      "static/chunks/117-4f5b424f20efdcae.js",
+      "static/chunks/main-app-cf3c8e9bbf37ec7a.js",
+      "static/css/a17e0e7520f24ade.css",
+      "static/chunks/app/layout-d8fa65445988395c.js"
+    ],
+    "/borrower/consent/page": [
+      "static/chunks/webpack-a3c37fcbf859f6f9.js",
+      "static/chunks/fd9d1056-b11b2651f33aae7f.js",
+      "static/chunks/117-4f5b424f20efdcae.js",
+      "static/chunks/main-app-cf3c8e9bbf37ec7a.js",
+      "static/chunks/448-9ae29c07f1cf4696.js",
+      "static/chunks/app/borrower/consent/page-def97c7c8ca6db82.js"
+    ],
+    "/admin/page": [
+      "static/chunks/webpack-a3c37fcbf859f6f9.js",
+      "static/chunks/fd9d1056-b11b2651f33aae7f.js",
+      "static/chunks/117-4f5b424f20efdcae.js",
+      "static/chunks/main-app-cf3c8e9bbf37ec7a.js",
+      "static/chunks/448-9ae29c07f1cf4696.js",
+      "static/chunks/app/admin/page-a77481a5d367571f.js"
+    ],
+    "/borrower/page": [
+      "static/chunks/webpack-a3c37fcbf859f6f9.js",
+      "static/chunks/fd9d1056-b11b2651f33aae7f.js",
+      "static/chunks/117-4f5b424f20efdcae.js",
+      "static/chunks/main-app-cf3c8e9bbf37ec7a.js",
+      "static/chunks/448-9ae29c07f1cf4696.js",
+      "static/chunks/app/borrower/page-1525c66c1e300b26.js"
+    ],
+    "/borrower/readiness/page": [
+      "static/chunks/webpack-a3c37fcbf859f6f9.js",
+      "static/chunks/fd9d1056-b11b2651f33aae7f.js",
+      "static/chunks/117-4f5b424f20efdcae.js",
+      "static/chunks/main-app-cf3c8e9bbf37ec7a.js",
+      "static/chunks/448-9ae29c07f1cf4696.js",
+      "static/chunks/app/borrower/readiness/page-c0eec653b6fbd531.js"
+    ],
+    "/lender/manual-review/page": [
+      "static/chunks/webpack-a3c37fcbf859f6f9.js",
+      "static/chunks/fd9d1056-b11b2651f33aae7f.js",
+      "static/chunks/117-4f5b424f20efdcae.js",
+      "static/chunks/main-app-cf3c8e9bbf37ec7a.js",
+      "static/chunks/448-9ae29c07f1cf4696.js",
+      "static/chunks/app/lender/manual-review/page-2c4402be31c9e55e.js"
+    ],
+    "/borrower/trust-summary/page": [
+      "static/chunks/webpack-a3c37fcbf859f6f9.js",
+      "static/chunks/fd9d1056-b11b2651f33aae7f.js",
+      "static/chunks/117-4f5b424f20efdcae.js",
+      "static/chunks/main-app-cf3c8e9bbf37ec7a.js",
+      "static/chunks/448-9ae29c07f1cf4696.js",
+      "static/chunks/app/borrower/trust-summary/page-9cce3bf6fb5caef9.js"
+    ],
+    "/borrower/outcome-simulator/page": [
+      "static/chunks/webpack-a3c37fcbf859f6f9.js",
+      "static/chunks/fd9d1056-b11b2651f33aae7f.js",
+      "static/chunks/117-4f5b424f20efdcae.js",
+      "static/chunks/main-app-cf3c8e9bbf37ec7a.js",
+      "static/chunks/448-9ae29c07f1cf4696.js",
+      "static/chunks/app/borrower/outcome-simulator/page-29e542eb4ffe46cb.js"
+    ],
+    "/lender/page": [
+      "static/chunks/webpack-a3c37fcbf859f6f9.js",
+      "static/chunks/fd9d1056-b11b2651f33aae7f.js",
+      "static/chunks/117-4f5b424f20efdcae.js",
+      "static/chunks/main-app-cf3c8e9bbf37ec7a.js",
+      "static/chunks/448-9ae29c07f1cf4696.js",
+      "static/chunks/app/lender/page-3eccd982023066b1.js"
+    ],
+    "/lender/policy-layer/page": [
+      "static/chunks/webpack-a3c37fcbf859f6f9.js",
+      "static/chunks/fd9d1056-b11b2651f33aae7f.js",
+      "static/chunks/117-4f5b424f20efdcae.js",
+      "static/chunks/main-app-cf3c8e9bbf37ec7a.js",
+      "static/chunks/448-9ae29c07f1cf4696.js",
+      "static/chunks/app/lender/policy-layer/page-4ecd7b949d7e8ca6.js"
+    ],
+    "/lender/applications/page": [
+      "static/chunks/webpack-a3c37fcbf859f6f9.js",
+      "static/chunks/fd9d1056-b11b2651f33aae7f.js",
+      "static/chunks/117-4f5b424f20efdcae.js",
+      "static/chunks/main-app-cf3c8e9bbf37ec7a.js",
+      "static/chunks/448-9ae29c07f1cf4696.js",
+      "static/chunks/app/lender/applications/page-24902c1aa397963d.js"
+    ],
+    "/borrower/roadmap/page": [
+      "static/chunks/webpack-a3c37fcbf859f6f9.js",
+      "static/chunks/fd9d1056-b11b2651f33aae7f.js",
+      "static/chunks/117-4f5b424f20efdcae.js",
+      "static/chunks/main-app-cf3c8e9bbf37ec7a.js",
+      "static/chunks/448-9ae29c07f1cf4696.js",
+      "static/chunks/app/borrower/roadmap/page-db452b3c1ae11f4b.js"
+    ],
+    "/lender/readiness-analysis/page": [
+      "static/chunks/webpack-a3c37fcbf859f6f9.js",
+      "static/chunks/fd9d1056-b11b2651f33aae7f.js",
+      "static/chunks/117-4f5b424f20efdcae.js",
+      "static/chunks/main-app-cf3c8e9bbf37ec7a.js",
+      "static/chunks/448-9ae29c07f1cf4696.js",
+      "static/chunks/app/lender/readiness-analysis/page-a40963c5f046b9d4.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-a3c37fcbf859f6f9.js",
+      "static/chunks/fd9d1056-b11b2651f33aae7f.js",
+      "static/chunks/117-4f5b424f20efdcae.js",
+      "static/chunks/main-app-cf3c8e9bbf37ec7a.js",
+      "static/chunks/556-d795710bd1510a03.js",
+      "static/chunks/app/page-c31a52caee0eefbe.js"
+    ],
+    "/lender/simulator/page": [
+      "static/chunks/webpack-a3c37fcbf859f6f9.js",
+      "static/chunks/fd9d1056-b11b2651f33aae7f.js",
+      "static/chunks/117-4f5b424f20efdcae.js",
+      "static/chunks/main-app-cf3c8e9bbf37ec7a.js",
+      "static/chunks/448-9ae29c07f1cf4696.js",
+      "static/chunks/app/lender/simulator/page-7964cd6a4c36ab6f.js"
+    ]
+  }
+}
