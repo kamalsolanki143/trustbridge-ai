@@ -2,7 +2,7 @@ import datetime
 import pytest
 from httpx import AsyncClient
 from sqlalchemy.ext.asyncio import AsyncSession
-from backend.app.models import Consent, ConsentAuditLog
+from app.models import Consent, ConsentAuditLog
 
 @pytest.mark.asyncio
 async def test_consent_lifecycle_and_audit(client: AsyncClient, db_session: AsyncSession):

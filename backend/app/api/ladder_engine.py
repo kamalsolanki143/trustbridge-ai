@@ -2,10 +2,10 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.db import get_db
-from backend.app.models import Borrower, LenderPolicy
-from backend.app.schemas.recommendation import LadderDecision
-from backend.app.services._stubs import get_ladder_decision
+from app.db import get_db
+from app.models import Borrower, LenderPolicy
+from app.schemas.recommendation import LadderDecision
+from app.services._stubs import get_ladder_decision
 
 router = APIRouter(prefix="/ladder", tags=["Ladder Decision Engine"])
 

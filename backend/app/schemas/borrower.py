@@ -2,7 +2,9 @@ import datetime
 from typing import Optional, Dict, Any
 from pydantic import BaseModel, EmailStr, Field
 
-# TODO: move to schemas/ once Krrish's PR lands
+# ==============================================================================
+# Muskan's Borrower Schemas (TODO: move/merge once Krrish's PR lands)
+# ==============================================================================
 
 class BorrowerBase(BaseModel):
     name: str = Field(..., example="Karan Johar")
@@ -29,3 +31,38 @@ class BorrowerDashboardResponse(BaseModel):
     active_ladder_outcome: Optional[str] = None
     consent_status_overview: Dict[str, str] # data_source -> status (approved, revoked, expired, missing)
     growth_roadmap: Optional[Dict[str, Any]] = None
+
+
+# ==============================================================================
+# Krrish's MSME Schemas (from main branch)
+# ==============================================================================
+
+class MSMEBase(BaseModel):
+    business_name: str
+    owner_name: str
+    business_type: Optional[str] = None
+    address: Optional[str] = None
+    city: Optional[str] = None
+    state: Optional[str] = None
+    gstin: str
+    email: Optional[str] = None
+    phone: Optional[str] = None
+
+class MSMECreate(MSMEBase):
+    pass
+
+class MSMEResponse(MSMEBase):
+    id: str
+    created_at: datetime.datetime
+    updated_at: datetime.datetime
+
+    class Config:
+        from_attributes = True
+
+class DataSourceResponse(BaseModel):
+    source_type: str
+    connected: bool
+    connected_at: Optional[datetime.datetime] = None
+
+    class Config:
+        from_attributes = True

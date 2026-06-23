@@ -1,5 +1,5 @@
-from backend.app.schemas.readiness import ReadinessProfile
-from backend.app.schemas.recommendation import LadderDecision
+from app.schemas.readiness import ReadinessProfile
+from app.schemas.recommendation import LadderDecision
 
 # STUB — replace with real implementation from Krrish/Kamal's modules during integration
 

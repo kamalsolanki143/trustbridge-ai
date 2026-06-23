@@ -2,11 +2,11 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.db import get_db
-from backend.app.models import Borrower, LenderPolicy, ManualReview
-from backend.app.schemas.borrower import BorrowerCreate, BorrowerResponse, BorrowerDashboardResponse
-from backend.app.services._stubs import get_readiness_profile, get_ladder_decision, get_growth_roadmap
-from backend.app.services.consent_trace import consent_tracker
+from app.db import get_db
+from app.models import Borrower, LenderPolicy, ManualReview
+from app.schemas.borrower import BorrowerCreate, BorrowerResponse, BorrowerDashboardResponse
+from app.services._stubs import get_readiness_profile, get_ladder_decision, get_growth_roadmap
+from app.services.consent_trace import consent_tracker
 
 router = APIRouter(prefix="/borrower", tags=["Borrower Profile & Dashboard"])
 

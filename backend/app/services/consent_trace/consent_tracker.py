@@ -3,8 +3,8 @@ from typing import List, Optional
 from sqlalchemy import select, and_
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.models import Consent, ConsentAuditLog, Borrower
-from backend.app.services.consent_trace.purpose_mapper import get_purpose_for_source, is_usage_permitted
+from app.models import Consent, ConsentAuditLog, Borrower
+from app.services.consent_trace.purpose_mapper import get_purpose_for_source, is_usage_permitted
 
 async def record_consent_grant(
     db: AsyncSession,
@@ -25,7 +25,7 @@ async def record_consent_grant(
         raise ValueError(f"Borrower with ID {borrower_id} not found.")
 
     # 2. Validate data source
-    from backend.app.services.consent_trace.purpose_mapper import PURPOSE_MAP
+    from app.services.consent_trace.purpose_mapper import PURPOSE_MAP
     canonical_source = data_source.strip().lower()
     if canonical_source not in PURPOSE_MAP:
         raise ValueError(f"Data source '{data_source}' is not supported. Must be one of: {list(PURPOSE_MAP.keys())}")

@@ -4,16 +4,16 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.db import get_db
-from backend.app.models import Borrower, LenderPolicy, LenderDecision
-from backend.app.schemas.recommendation import (
+from app.db import get_db
+from app.models import Borrower, LenderPolicy, LenderDecision
+from app.schemas.recommendation import (
     LenderPolicyRequest,
     LenderPolicyResponse,
     LenderDecisionRecordRequest,
     LenderDecisionRecordResponse,
     LenderApplicationResponse
 )
-from backend.app.services._stubs import get_readiness_profile, get_ladder_decision
+from app.services._stubs import get_readiness_profile, get_ladder_decision
 
 router = APIRouter(prefix="/lender", tags=["Lender Actions & Settings"])
 

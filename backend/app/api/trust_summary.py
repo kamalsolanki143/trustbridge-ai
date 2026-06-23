@@ -3,10 +3,10 @@ from fastapi.responses import StreamingResponse
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.db import get_db
-from backend.app.models import Borrower
-from backend.app.schemas.recommendation import TrustSummaryResponse
-from backend.app.services.trust_summary import summary_generator, pdf_export
+from app.db import get_db
+from app.models import Borrower
+from app.schemas.recommendation import TrustSummaryResponse
+from app.services.trust_summary import summary_generator, pdf_export
 
 router = APIRouter(prefix="/trust-summary", tags=["Underwriting Trust Summary"])
 

@@ -4,9 +4,9 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import select, or_
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.db import get_db
-from backend.app.models import ManualReview, LenderDecision
-from backend.app.schemas.recommendation import ManualReviewResponse, ManualReviewResolveRequest
+from app.db import get_db
+from app.models import ManualReview, LenderDecision
+from app.schemas.recommendation import ManualReviewResponse, ManualReviewResolveRequest
 
 router = APIRouter(prefix="/manual-review", tags=["Manual Review Queue"])
 

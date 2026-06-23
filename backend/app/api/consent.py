@@ -2,18 +2,18 @@ from typing import List
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.db import get_db
-from backend.app.schemas.consent import (
+from app.db import get_db
+from app.schemas.consent import (
     GrantConsentRequest,
     RevokeConsentRequest,
-    ConsentResponse,
+    BorrowerConsentResponse,
     ConsentAuditLogResponse
 )
-from backend.app.services.consent_trace import consent_tracker
+from app.services.consent_trace import consent_tracker
 
 router = APIRouter(prefix="/consent", tags=["Consent Management"])
 
-@router.post("/grant", response_model=ConsentResponse, status_code=status.HTTP_201_CREATED)
+@router.post("/grant", response_model=BorrowerConsentResponse, status_code=status.HTTP_201_CREATED)
 async def grant_consent(
     request: GrantConsentRequest,
     db: AsyncSession = Depends(get_db)
@@ -37,7 +37,7 @@ async def grant_consent(
             detail=str(e)
         )
 
-@router.post("/revoke", response_model=ConsentResponse)
+@router.post("/revoke", response_model=BorrowerConsentResponse)
 async def revoke_consent(
     request: RevokeConsentRequest,
     db: AsyncSession = Depends(get_db)
@@ -58,7 +58,7 @@ async def revoke_consent(
         )
     return consent
 
-@router.get("/{borrower_id}", response_model=List[ConsentResponse])
+@router.get("/{borrower_id}", response_model=List[BorrowerConsentResponse])
 async def list_consents(
     borrower_id: str,
     db: AsyncSession = Depends(get_db)

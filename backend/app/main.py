@@ -3,21 +3,34 @@ from fastapi import FastAPI, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from backend.app.db import engine, Base
-from backend.app.api.borrower import router as borrower_router
-from backend.app.api.lender import router as lender_router
-from backend.app.api.consent import router as consent_router
-from backend.app.api.trust_summary import router as trust_summary_router
-from backend.app.api.ladder_engine import router as ladder_router
-from backend.app.api.manual_review import router as manual_review_router
+# Muskan's imports
+from app.db import engine as async_engine, Base as async_base
+from app.api.borrower import router as borrower_router
+from app.api.lender import router as lender_router
+from app.api.consent import router as consent_router
+from app.api.trust_summary import router as trust_summary_router
+from app.api.ladder_engine import router as ladder_router
+from app.api.manual_review import router as manual_review_router
+
+# Krrish's imports
+from app.database.db import init_db
+from app.database.seed import seed_database
+from app.api.readiness import router as readiness_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Startup: Initialize the DB schema automatically for local development and testing
-    async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
+    # Startup: Initialize Muskan's async DB tables for trust summaries/consents
+    async with async_engine.begin() as conn:
+        await conn.run_sync(async_base.metadata.create_all)
+        
+    # Initialize Krrish's sync DB tables and run seed data
+    init_db()
+    try:
+        seed_database()
+    except Exception:
+        pass # Avoid crashing if database is already seeded
+        
     yield
-    # Shutdown: Clean up resources if necessary
 
 app = FastAPI(
     title="TrustBridge AI - Backend API",
@@ -27,10 +40,9 @@ app = FastAPI(
 )
 
 # CORS Configuration
-# Allows requests from standard Next.js dev server origins
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -52,13 +64,11 @@ app.include_router(trust_summary_router, prefix="/api/v1")
 app.include_router(ladder_router, prefix="/api/v1")
 app.include_router(manual_review_router, prefix="/api/v1")
 
+# Register Krrish's router
+app.include_router(readiness_router)
+
 # ==============================================================================
-# TODO(team): Krrish/Kamal register your routers here — readiness.py, simulator.py
-# Example:
-# from backend.app.api.readiness import router as readiness_router
-# from backend.app.api.simulator import router as simulator_router
-# app.include_router(readiness_router, prefix="/api/v1")
-# app.include_router(simulator_router, prefix="/api/v1")
+# TODO(team): Kamal register your simulator.py router here
 # ==============================================================================
 
 @app.get("/health", tags=["System Health"])

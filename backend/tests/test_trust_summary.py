@@ -3,7 +3,7 @@ import pytest
 from httpx import AsyncClient
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
-from backend.app.models import ManualReview, LenderDecision
+from app.models import ManualReview, LenderDecision
 
 @pytest.mark.asyncio
 async def test_trust_summary_and_lender_flows(client: AsyncClient, db_session: AsyncSession):

@@ -1,8 +1,42 @@
 import datetime
-from typing import List, Optional
+from typing import List, Dict, Optional, Any
 from pydantic import BaseModel, Field
 
-# TODO: move to schemas/ once Krrish's PR lands
+# ==============================================================================
+# Kamal's Growth Roadmap & Scenario Schemas (from main branch)
+# ==============================================================================
+
+class Milestone(BaseModel):
+    title: str
+    description: str
+    impact: str
+    timeline: str
+    effort: str
+
+
+class GrowthRoadmapResponse(BaseModel):
+    current_grade: str
+    target_grade: str
+    milestones: List[Milestone]
+    progress_percent: float
+
+
+class ScenarioInput(BaseModel):
+    gstin: str
+    adjustments: Dict[str, Any]
+
+
+class ScenarioResult(BaseModel):
+    projected_score: int
+    projected_grade: str
+    projected_outcome: str
+    delta_score: int
+    improvements: List[str]
+
+
+# ==============================================================================
+# Muskan's Credit Ladder, Lender & Manual Review Schemas
+# ==============================================================================
 
 class LadderDecision(BaseModel):
     decision: str = Field(..., example="Starter Loan") # Pre-Qualified | Starter Loan | Improve First | Manual Review

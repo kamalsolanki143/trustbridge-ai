@@ -4,10 +4,10 @@ from typing import Optional
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.models import TrustSummary, Borrower, LenderPolicy
-from backend.app.services._stubs import get_readiness_profile, get_ladder_decision
-from backend.app.services.consent_trace.consent_tracker import get_active_consents, record_consent_usage
-from backend.app.services import gemini_client
+from app.models import TrustSummary, Borrower, LenderPolicy
+from app.services._stubs import get_readiness_profile, get_ladder_decision
+from app.services.consent_trace.consent_tracker import get_active_consents, record_consent_usage
+from app.services import gemini_client
 
 async def generate_trust_summary(db: AsyncSession, borrower_id: str) -> TrustSummary:
     """

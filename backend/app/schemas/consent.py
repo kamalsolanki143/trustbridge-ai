@@ -2,7 +2,9 @@ import datetime
 from typing import Optional
 from pydantic import BaseModel, Field
 
-# TODO: move to schemas/ once Krrish's PR lands
+# ==============================================================================
+# Muskan's Consent Schemas (TODO: move to schemas/ once Krrish's PR lands)
+# ==============================================================================
 
 class GrantConsentRequest(BaseModel):
     borrower_id: str = Field(..., example="borrower_uuid_123")
@@ -15,7 +17,7 @@ class RevokeConsentRequest(BaseModel):
     borrower_id: str = Field(..., example="borrower_uuid_123")
     data_source: str = Field(..., example="bank_statements")
 
-class ConsentResponse(BaseModel):
+class BorrowerConsentResponse(BaseModel):
     id: int
     borrower_id: str
     data_source: str
@@ -41,3 +43,31 @@ class ConsentAuditLogResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+# ==============================================================================
+# Krrish's Consent Schemas (from main branch)
+# ==============================================================================
+
+class ConsentGrantRequest(BaseModel):
+    msme_id: str
+    data_sources: list[str]
+    purpose: str = "Credit Readiness Assessment for IDBI Bank Loan Application"
+
+class ConsentResponse(BaseModel):
+    id: str
+    msme_id: str
+    consent_token: str
+    data_sources: list[str]
+    purpose: str
+    status: str
+    granted_at: datetime.datetime
+    expires_at: Optional[datetime.datetime] = None
+
+    class Config:
+        from_attributes = True
+
+class ConsentCheckRequest(BaseModel):
+    consent_token: str
+    gstin: str
+    data_sources: list[str]

@@ -1,7 +1,7 @@
 import datetime
 from sqlalchemy import String, Integer, DateTime, Float, ForeignKey, JSON
 from sqlalchemy.orm import Mapped, mapped_column
-from backend.app.db import Base
+from app.db import Base
 
 # TODO: Coordinate with Krrish to merge these models into the unified models.py once his data ingestion PR lands.
 
