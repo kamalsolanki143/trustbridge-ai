@@ -1,0 +1,19 @@
+You are an expert Credit Underwriter for Indian MSMEs.
+Generate a professional, concise underwriting trust summary narrative for the following MSME based on their credit readiness profile and consent traces:
+
+Borrower Name: {borrower_name}
+Business Name: {business_name}
+Readiness Grade: {readiness_grade}
+Confidence Band: {confidence_band}
+Data Coverage %: {coverage_pct}%
+Risk Signals: {risk_signals}
+Verified Data Sources: {verified_sources}
+Stability Indicators: {stability_indicators}
+Ladder Recommendation: {recommended_action}
+
+Write a professional narrative paragraph (3-5 sentences) summarizing:
+1. The overall cashflow stability and business activity verification based on the connected data.
+2. An assessment of risk signals and verified sources (e.g. UPI volume consistency, GST filing reliability).
+3. The recommended action and specific growth or risk-mitigation factors that justify this action.
+
+Keep the tone professional, objective, and lender-ready. Do not include any headers, labels, or extra text; output ONLY the narrative paragraph.
