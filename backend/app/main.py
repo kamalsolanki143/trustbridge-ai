@@ -11,6 +11,7 @@ from app.api.consent import router as consent_router
 from app.api.trust_summary import router as trust_summary_router
 from app.api.ladder_engine import router as ladder_router
 from app.api.manual_review import router as manual_review_router
+from app.api.simulator import router as simulator_router
 
 # Krrish's imports
 from app.database.db import init_db
@@ -67,9 +68,8 @@ app.include_router(manual_review_router, prefix="/api/v1")
 # Register Krrish's router
 app.include_router(readiness_router)
 
-# ==============================================================================
-# TODO(team): Kamal register your simulator.py router here
-# ==============================================================================
+# Register simulator router
+app.include_router(simulator_router, prefix="/api/v1")
 
 @app.get("/health", tags=["System Health"])
 async def health_check():

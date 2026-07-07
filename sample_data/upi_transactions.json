@@ -1,0 +1,65 @@
+{
+  "19AABCS1429B1ZX": {
+    "business_name": "Sharma Textile Works",
+    "vpa": "sharmatextiles@okaxis",
+    "monthly_transactions": 847,
+    "avg_monthly_inflow": 320000.0,
+    "avg_monthly_outflow": 240000.0,
+    "transaction_history": [
+      { "month": 1, "inflow": 303000, "outflow": 220000, "transactions": 810 },
+      { "month": 2, "inflow": 306000, "outflow": 225000, "transactions": 820 },
+      { "month": 3, "inflow": 309000, "outflow": 230000, "transactions": 830 },
+      { "month": 4, "inflow": 312000, "outflow": 235000, "transactions": 840 },
+      { "month": 5, "inflow": 315000, "outflow": 238000, "transactions": 850 },
+      { "month": 6, "inflow": 318000, "outflow": 240000, "transactions": 860 },
+      { "month": 7, "inflow": 321000, "outflow": 242000, "transactions": 855 },
+      { "month": 8, "inflow": 324000, "outflow": 244000, "transactions": 865 },
+      { "month": 9, "inflow": 327000, "outflow": 246000, "transactions": 870 },
+      { "month": 10, "inflow": 330000, "outflow": 248000, "transactions": 880 },
+      { "month": 11, "inflow": 333000, "outflow": 250000, "transactions": 890 },
+      { "month": 12, "inflow": 336000, "outflow": 252000, "transactions": 900 }
+    ]
+  },
+  "24AAACP3415G1ZK": {
+    "business_name": "Patel Hardware Suppliers",
+    "vpa": "patelhardware@okhdfc",
+    "monthly_transactions": 312,
+    "avg_monthly_inflow": 110000.0,
+    "avg_monthly_outflow": 95000.0,
+    "transaction_history": [
+      { "month": 1, "inflow": 115000, "outflow": 98000, "transactions": 310 },
+      { "month": 2, "inflow": 100000, "outflow": 89000, "transactions": 290 },
+      { "month": 3, "inflow": 130000, "outflow": 110000, "transactions": 340 },
+      { "month": 4, "inflow": 115000, "outflow": 99000, "transactions": 315 },
+      { "month": 5, "inflow": 100000, "outflow": 88000, "transactions": 285 },
+      { "month": 6, "inflow": 130000, "outflow": 112000, "transactions": 345 },
+      { "month": 7, "inflow": 115000, "outflow": 99000, "transactions": 318 },
+      { "month": 8, "inflow": 100000, "outflow": 89000, "transactions": 292 },
+      { "month": 9, "inflow": 130000, "outflow": 111000, "transactions": 338 },
+      { "month": 10, "inflow": 115000, "outflow": 98000, "transactions": 312 },
+      { "month": 11, "inflow": 100000, "outflow": 87000, "transactions": 288 },
+      { "month": 12, "inflow": 130000, "outflow": 110000, "transactions": 348 }
+    ]
+  },
+  "27AAAFK2314H1ZM": {
+    "business_name": "Khan Catering Services",
+    "vpa": "khancatering@okicici",
+    "monthly_transactions": 98,
+    "avg_monthly_inflow": 60000.0,
+    "avg_monthly_outflow": 55000.0,
+    "transaction_history": [
+      { "month": 1, "inflow": 58000, "outflow": 54000, "transactions": 95 },
+      { "month": 2, "inflow": 66000, "outflow": 61000, "transactions": 105 },
+      { "month": 3, "inflow": 74000, "outflow": 68000, "transactions": 115 },
+      { "month": 4, "inflow": 50000, "outflow": 46000, "transactions": 85 },
+      { "month": 5, "inflow": 58000, "outflow": 53000, "transactions": 93 },
+      { "month": 6, "inflow": 66000, "outflow": 60000, "transactions": 102 },
+      { "month": 7, "inflow": 74000, "outflow": 69000, "transactions": 112 },
+      { "month": 8, "inflow": 50000, "outflow": 45000, "transactions": 83 },
+      { "month": 9, "inflow": 58000, "outflow": 52000, "transactions": 91 },
+      { "month": 10, "inflow": 66000, "outflow": 61000, "transactions": 100 },
+      { "month": 11, "inflow": 74000, "outflow": 67000, "transactions": 110 },
+      { "month": 12, "inflow": 50000, "outflow": 47000, "transactions": 86 }
+    ]
+  }
+}
