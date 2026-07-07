@@ -70,43 +70,43 @@ export default function LenderDashboard() {
   return (
     <div className="flex min-h-screen flex-col bg-[#0A0A0F]">
       <Navbar role="lender" />
-      <main className="flex-1 px-6 py-8">
+      <main className="flex-1 px-6 py-10">
         <div className="mx-auto max-w-5xl">
-          <div className="mb-8">
-            <h1 className="text-2xl font-bold text-[#F8FAFC]">Lender Dashboard</h1>
-            <p className="mt-1 text-sm text-[#94A3B8]">IDBI Bank &mdash; MSME Credit Assessment Portal</p>
+          <div className="mb-10">
+            <h1 className="text-3xl font-bold text-white tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Lender Dashboard</h1>
+            <p className="mt-2 text-sm text-slate-300">IDBI Bank &mdash; MSME Credit Assessment Portal</p>
           </div>
 
-          <div className="mb-6 grid gap-4 sm:grid-cols-4">
+          <div className="mb-8 grid gap-5 sm:grid-cols-4">
             {[
               { label: "Total Assessed", value: stats.total },
               { label: "Pre-Qualified", value: `${Math.round((stats.preQualified / stats.total) * 100)}%` },
               { label: "Avg Score", value: stats.avgScore },
               { label: "Starter Loans", value: stats.starterLoan },
             ].map((stat) => (
-              <div key={stat.label} className="rounded-lg border border-[#1E1E2E] bg-[#12121A] p-4">
-                <p className="text-xs text-[#94A3B8]">{stat.label}</p>
-                <p className="mt-1 text-2xl font-bold text-[#F8FAFC]">{stat.value}</p>
+              <div key={stat.label} className="rounded-xl border border-[#1E1E2E] bg-[#12121A] p-5 shadow-sm">
+                <p className="text-xs text-slate-400 font-medium tracking-wide uppercase">{stat.label}</p>
+                <p className="mt-2 text-3xl font-bold text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{stat.value}</p>
               </div>
             ))}
           </div>
 
-          <div className="mb-4 flex items-center gap-4">
+          <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-center">
             <input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search by business name or GSTIN..."
-              className="flex-1 rounded-lg border border-[#1E1E2E] bg-[#12121A] px-4 py-2 text-sm text-[#F8FAFC] placeholder-[#4A4A5A] outline-none focus:border-[#6366F1]"
+              className="flex-1 rounded-lg border border-[#1E1E2E] bg-[#12121A] px-4 py-3 text-sm text-white placeholder-[#5A5B6E] outline-none focus:border-[#00C9A7] focus:ring-2 focus:ring-[#00C9A7]/20 transition-all duration-300"
             />
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               {outcomeFilterOptions.map((opt) => (
                 <button
                   key={opt}
                   onClick={() => setFilterOutcome(opt)}
-                  className={`rounded-lg px-3 py-2 text-xs transition-colors ${
+                  className={`rounded-lg px-4 py-2.5 text-xs font-semibold transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
                     filterOutcome === opt
-                      ? "bg-[#6366F1] text-white"
-                      : "bg-[#1E1E2E] text-[#94A3B8] hover:text-[#F8FAFC]"
+                      ? "bg-[#00C9A7] text-white"
+                      : "bg-[#1E1E2E] text-slate-400 hover:text-white"
                   }`}
                 >
                   {opt}
@@ -115,7 +115,7 @@ export default function LenderDashboard() {
             </div>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-4">
             {filtered.map((applicant) => (
               <ApplicantCard
                 key={applicant.id}
@@ -130,8 +130,8 @@ export default function LenderDashboard() {
               />
             ))}
             {filtered.length === 0 && (
-              <div className="rounded-lg border border-[#1E1E2E] bg-[#12121A] p-8 text-center">
-                <p className="text-sm text-[#94A3B8]">No applicants match your filters.</p>
+              <div className="rounded-xl border border-[#1E1E2E] bg-[#12121A] p-10 text-center">
+                <p className="text-sm text-slate-400">No applicants match your filters.</p>
               </div>
             )}
           </div>

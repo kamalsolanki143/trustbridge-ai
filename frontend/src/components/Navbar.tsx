@@ -30,15 +30,15 @@ export default function Navbar() {
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6">
         <div className="flex items-center gap-3">
           <a href="/" className="flex items-baseline gap-1">
-            <span className="font-semibold tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "22px", color: "#F0F2FF" }}>
+            <span className="font-semibold tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "22px" }}>
               TrustBridge
             </span>
-            <span className="font-semibold tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "22px", color: "#00C9A7" }}>
+            <span className="font-semibold tracking-tight text-[#00C9A7]" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "22px" }}>
               AI
             </span>
           </a>
-          <span style={{ color: "#4A4D6A" }}>·</span>
-          <span className="font-mono text-xs tracking-wide" style={{ color: "#4A4D6A" }}>
+          <span className="text-slate-500">·</span>
+          <span className="font-mono text-xs tracking-wide text-slate-400">
             IDBI Innovate 2026
           </span>
         </div>
@@ -48,8 +48,8 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="group relative text-sm transition-colors"
-              style={{ color: "#8B8FA8", fontFamily: "'Inter', sans-serif" }}
+              className="group relative text-sm text-slate-300 transition-colors duration-300 hover:text-white"
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               {link.label}
               <span
@@ -63,10 +63,8 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href="/lender"
-            className="px-5 py-2.5 text-sm font-medium transition-all duration-200"
+            className="rounded px-5 py-2.5 text-sm font-medium text-slate-300 border border-[#2A2B40] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
             style={{
-              border: "1px solid #2A2B40",
-              color: "#8B8FA8",
               fontFamily: "'Inter', sans-serif",
             }}
             onMouseEnter={(e) => {
@@ -75,14 +73,14 @@ export default function Navbar() {
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.borderColor = "#2A2B40"
-              e.currentTarget.style.color = "#8B8FA8"
+              e.currentTarget.style.color = "#CBD5E1"
             }}
           >
             I&apos;m a Lender
           </a>
           <a
             href="/borrower"
-            className="px-5 py-2.5 text-sm font-medium text-white transition-all duration-200"
+            className="rounded px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
             style={{
               backgroundColor: "#00C9A7",
               fontFamily: "'Inter', sans-serif",

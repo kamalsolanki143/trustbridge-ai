@@ -23,10 +23,11 @@ export default function CTA() {
         initial={{ opacity: 0, y: 30 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.7, ease: "easeOut" as const }}
-        className="relative z-10 mx-auto max-w-3xl text-center"
+        className="relative z-10 mx-auto max-w-3xl text-center rounded-2xl backdrop-blur-sm"
         style={{
           border: "1px solid",
           borderColor: "#00C9A720",
+          backgroundColor: "#0E0F1A/80",
           padding: "64px 48px",
         }}
       >
@@ -41,14 +42,14 @@ export default function CTA() {
           &ldquo;From credit invisible<br />to credit ready.&rdquo;
         </h2>
 
-        <p className="mx-auto mt-6 max-w-[520px] text-base leading-relaxed" style={{ color: "#8B8FA8", fontFamily: "'Inter', sans-serif" }}>
+        <p className="mx-auto mt-6 max-w-[520px] text-base leading-relaxed text-slate-300" style={{ fontFamily: "'Inter', sans-serif" }}>
           The same MSME rejected 3 times with documents gets assessed in 10 seconds using data they already generate.
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
             href="/borrower"
-            className="px-8 py-4 text-[15px] font-semibold text-white transition-all duration-200"
+            className="rounded px-8 py-4 text-[15px] font-semibold text-white transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
             style={{
               backgroundColor: "#00C9A7",
               fontFamily: "'Space Grotesk', sans-serif",
@@ -65,7 +66,7 @@ export default function CTA() {
           </a>
           <a
             href="#solution"
-            className="px-8 py-4 text-[15px] font-semibold transition-all duration-200"
+            className="rounded px-8 py-4 text-[15px] font-semibold transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
             style={{
               border: "1px solid #2A2B40",
               color: "#F0F2FF",
@@ -73,16 +74,18 @@ export default function CTA() {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.borderColor = "#00C9A7"
+              e.currentTarget.style.boxShadow = "0 0 20px rgba(0,201,167,0.1)"
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.borderColor = "#2A2B40"
+              e.currentTarget.style.boxShadow = "none"
             }}
           >
             View Architecture
           </a>
         </div>
 
-        <div className="mt-10 flex items-center justify-center gap-4 font-mono text-xs" style={{ color: "#4A4D6A" }}>
+        <div className="mt-10 flex items-center justify-center gap-4 font-mono text-xs text-slate-400">
           <span>🏦 IDBI Bank</span>
           <span style={{ color: "#1C1D2E" }}>·</span>
           <span>Track 03</span>

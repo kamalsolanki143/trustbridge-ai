@@ -97,7 +97,7 @@ export default function Features() {
           </h2>
         </div>
 
-        <div ref={ref} className="mt-16 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div ref={ref} className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, i) => (
             <motion.div
               key={feature.title}
@@ -105,7 +105,7 @@ export default function Features() {
               animate={inView ? "visible" : "hidden"}
               variants={cardVariants}
               transition={{ delay: i * 0.1 }}
-              className="group p-8 transition-all duration-300"
+              className="group rounded-xl p-8 transition-all duration-300 shadow-md hover:shadow-lg"
               style={{
                 backgroundColor: "#0E0F1A",
                 border: "1px solid",
@@ -120,13 +120,13 @@ export default function Features() {
                 e.currentTarget.style.transform = "translateY(0)"
               }}
             >
-              <div className="mb-5 flex h-10 w-10 items-center justify-center" style={{ backgroundColor: "#00C9A710" }}>
+              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-lg" style={{ backgroundColor: "#00C9A710" }}>
                 {feature.icon}
               </div>
               <h3 className="mb-3 text-lg font-semibold" style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#F0F2FF" }}>
                 {feature.title}
               </h3>
-              <p className="text-sm leading-relaxed" style={{ color: "#8B8FA8", fontFamily: "'Inter', sans-serif" }}>
+              <p className="text-sm leading-relaxed text-slate-300" style={{ fontFamily: "'Inter', sans-serif" }}>
                 {feature.body}
               </p>
               <p className="mt-5 font-mono text-[10px] font-medium tracking-[0.15em]" style={{ color: "#00C9A7" }}>

@@ -78,10 +78,10 @@ export default function WhyUs() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, ease: "easeOut" as const }}
           >
-            <div className="overflow-hidden" style={{ border: "1px solid #1C1D2E" }}>
-              <div className="grid grid-cols-3 border-b text-xs font-semibold uppercase tracking-wider" style={{ borderColor: "#1C1D2E", backgroundColor: "#0E0F1A", color: "#4A4D6A" }}>
+            <div className="overflow-hidden rounded-xl" style={{ border: "1px solid #1C1D2E" }}>
+              <div className="grid grid-cols-3 border-b text-xs font-semibold uppercase tracking-wider" style={{ borderColor: "#1C1D2E", backgroundColor: "#0E0F1A" }}>
                 <div className="px-4 py-3" />
-                <div className="border-x px-4 py-3 text-center" style={{ borderColor: "#1C1D2E", color: "#8B8FA8" }}>Traditional Lending</div>
+                <div className="border-x px-4 py-3 text-center text-slate-400" style={{ borderColor: "#1C1D2E" }}>Traditional Lending</div>
                 <div className="px-4 py-3 text-center" style={{ color: "#00C9A7" }}>TrustBridge AI</div>
               </div>
               {rows.map((row, i) => (
@@ -89,9 +89,9 @@ export default function WhyUs() {
                   key={row.label}
                   className="grid grid-cols-3 border-b text-sm" style={{ borderColor: "#1C1D2E" }}
                 >
-                  <div className="px-4 py-3.5 text-xs font-medium" style={{ color: "#8B8FA8", fontFamily: "'Inter', sans-serif" }}>{row.label}</div>
-                  <div className="border-x px-4 py-3.5 text-center font-mono text-xs" style={{ borderColor: "#1C1D2E", color: "#4A4D6A" }}>
-                    <span className="mr-1" style={{ color: "#EF4444" }}>✕</span>{row.traditional}
+                  <div className="px-4 py-3.5 text-xs font-medium text-slate-300" style={{ fontFamily: "'Inter', sans-serif" }}>{row.label}</div>
+                  <div className="border-x px-4 py-3.5 text-center font-mono text-xs text-slate-400" style={{ borderColor: "#1C1D2E" }}>
+                    <span className="mr-1 text-red-500">✕</span>{row.traditional}
                   </div>
                   <div className="px-4 py-3.5 text-center font-mono text-xs" style={{ color: "#00C9A7" }}>
                     <span className="mr-1">✓</span>{row.trust}
@@ -114,13 +114,13 @@ export default function WhyUs() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={countersStarted ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: i * 0.15, duration: 0.6, ease: "easeOut" as const }}
-                  className="border-l-[3px] px-5 py-4"
-                  style={{ borderColor: "#00C9A7", backgroundColor: "#0E0F1A", borderLeftWidth: "3px" }}
+                  className="rounded-lg border-l-4 px-5 py-4"
+                  style={{ borderColor: "#00C9A7", backgroundColor: "#0E0F1A" }}
                 >
                   <p className="text-[42px] font-bold leading-none tracking-tight md:text-[48px]" style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#00C9A7" }}>
                     {displayValue}
                   </p>
-                  <p className="mt-2 text-sm leading-relaxed" style={{ color: "#8B8FA8", fontFamily: "'Inter', sans-serif" }}>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-300" style={{ fontFamily: "'Inter', sans-serif" }}>
                     {stat.label}
                   </p>
                 </motion.div>

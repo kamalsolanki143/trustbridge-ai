@@ -2,85 +2,98 @@
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: "#07080F", borderTop: "1px solid #1C1D2E" }}>
+    <footer className="border-t border-[#1C1D2E] bg-[#07080F]">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-10 md:grid-cols-4">
-          <div>
-            <div className="flex items-baseline gap-1">
-              <span className="font-semibold tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "20px", color: "#F0F2FF" }}>
-                TrustBridge
-              </span>
-              <span className="font-semibold tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "20px", color: "#00C9A7" }}>
-                AI
-              </span>
+          {/* Section 1 */}
+          <div className="flex flex-col justify-between">
+            <div>
+              <div className="flex items-baseline gap-1">
+                <span className="text-xl font-bold tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                  TrustBridge
+                </span>
+                <span className="text-xl font-bold tracking-tight text-[#00C9A7]" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                  AI
+                </span>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-slate-300" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Building Trust Between MSMEs and Credit
+              </p>
             </div>
-            <p className="mt-3 text-sm leading-relaxed" style={{ color: "#4A4D6A", fontFamily: "'Inter', sans-serif" }}>
-              Building Trust Between MSMEs and Credit
-            </p>
-            <div
-              className="mt-5 inline-block px-3 py-2 font-mono text-[11px]"
-              style={{ border: "1px solid #1C1D2E", color: "#4A4D6A" }}
-            >
-              🏦 IDBI Innovate 2026<br />Track 03 Submission
+            <div className="mt-6">
+              <span className="inline-flex items-center gap-1.5 rounded border border-[#1C1D2E] bg-[#0E0F1A] px-3 py-1.5 font-mono text-[11px] text-slate-400">
+                <span>🏦</span> IDBI Innovate 2026 Submission
+              </span>
             </div>
           </div>
 
+          {/* Section 2 */}
           <div>
-            <p className="mb-4 font-mono text-[11px] font-medium tracking-[0.15em]" style={{ color: "#00C9A7" }}>
+            <h4 className="mb-4 font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-white">
               PRODUCT
-            </p>
-            <ul className="space-y-3">
-              {["How It Works", "Credit Ladder", "Readiness API", "Data Sources", "For Lenders"].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="text-sm transition-colors duration-200"
-                    style={{ color: "#8B8FA8", fontFamily: "'Inter', sans-serif" }}
-                    onMouseEnter={(e) => { e.currentTarget.style.color = "#00C9A7" }}
-                    onMouseLeave={(e) => { e.currentTarget.style.color = "#8B8FA8" }}
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <p className="mb-4 font-mono text-[11px] font-medium tracking-[0.15em]" style={{ color: "#00C9A7" }}>
-              COMPLIANCE
-            </p>
-            <ul className="space-y-3">
-              {["RBI AA Framework", "Data Privacy", "Consent Management", "OCEN Integration", "Security"].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="text-sm transition-colors duration-200"
-                    style={{ color: "#8B8FA8", fontFamily: "'Inter', sans-serif" }}
-                    onMouseEnter={(e) => { e.currentTarget.style.color = "#00C9A7" }}
-                    onMouseLeave={(e) => { e.currentTarget.style.color = "#8B8FA8" }}
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <p className="mb-4 font-mono text-[11px] font-medium tracking-[0.15em]" style={{ color: "#00C9A7" }}>
-              IDBI INNOVATE 2026
-            </p>
-            <ul className="space-y-3">
+            </h4>
+            <ul className="space-y-2.5">
               {[
-                "Track 03: Financial Inclusion",
-                "Team: TrustBridge AI",
-                "Theme: Build. Integrate. Transform.",
+                { name: "How It Works", href: "#" },
+                { name: "Credit Ladder", href: "#" },
+                { name: "Credit Readiness API", href: "#" },
+                { name: "Borrower Journey", href: "#" }
               ].map((item) => (
-                <li key={item}>
-                  <span className="text-sm" style={{ color: "#8B8FA8", fontFamily: "'Inter', sans-serif" }}>
-                    {item}
-                  </span>
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    className="text-sm text-slate-400 transition-colors duration-300 hover:text-[#00C9A7]"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Section 3 */}
+          <div>
+            <h4 className="mb-4 font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-white">
+              COMPLIANCE
+            </h4>
+            <ul className="space-y-2.5">
+              {[
+                { name: "RBI Account Aggregator (AA)", href: "#" },
+                { name: "Consent Management", href: "#" },
+                { name: "Data Privacy", href: "#" }
+              ].map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    className="text-sm text-slate-400 transition-colors duration-300 hover:text-[#00C9A7]"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Section 4 */}
+          <div>
+            <h4 className="mb-4 font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-white">
+              HACKATHON
+            </h4>
+            <ul className="space-y-2.5">
+              {[
+                { name: "IDBI Innovate 2026", href: "#" },
+                { name: "Track 03 – Financial Inclusion", href: "#" }
+              ].map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    className="text-sm text-slate-400 transition-colors duration-300 hover:text-[#00C9A7]"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    {item.name}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -88,16 +101,18 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t" style={{ borderColor: "#1C1D2E" }}>
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 md:flex-row">
-          <span className="font-mono text-[11px]" style={{ color: "#4A4D6A" }}>
-            &copy; 2026 TrustBridge AI. Built for IDBI Innovate 2026.
+      {/* Bottom row */}
+      <div className="border-t border-[#1C1D2E]">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 md:flex-row">
+          <span className="font-mono text-xs text-slate-400">
+            &copy; 2026 TrustBridge AI. All Rights Reserved.
           </span>
-          <span className="font-mono text-[11px]" style={{ color: "#4A4D6A" }}>
-            Powered by Claude AI · FastAPI · Next.js
+          <span className="font-mono text-xs text-slate-400">
+            Powered by Compass Crew Team
           </span>
         </div>
       </div>
     </footer>
   )
 }
+

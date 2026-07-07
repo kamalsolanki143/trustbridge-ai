@@ -21,37 +21,37 @@ const outcomeStyles: Record<string, string> = {
   "Pre-Qualified": "text-[#10B981] bg-[#10B981]/10",
   "Starter Loan": "text-[#F59E0B] bg-[#F59E0B]/10",
   "Improve First": "text-[#EF4444] bg-[#EF4444]/10",
-  "Manual Review": "text-[#6366F1] bg-[#6366F1]/10",
+  "Manual Review": "text-[#00C9A7] bg-[#00C9A7]/10",
 }
 
 export default function ApplicantCard({ id, businessName, gstin, ownerName, city, grade, score, outcome }: ApplicantCardProps) {
   return (
     <Link
       href={`/lender/applications/${id}`}
-      className="block rounded-lg border border-[#1E1E2E] bg-[#12121A] p-4 transition-colors hover:border-[#6366F1]/50"
+      className="block rounded-xl border border-[#1E1E2E] bg-[#12121A] p-5 transition-all duration-300 hover:border-[#00C9A7]/50 hover:scale-[1.01] hover:shadow-md"
     >
       <div className="flex items-start justify-between">
         <div>
-          <h4 className="text-sm font-medium text-[#F8FAFC]">{businessName}</h4>
-          <p className="text-xs text-[#94A3B8]">{ownerName} &middot; {city}</p>
-          <p className="text-xs text-[#4A4A5A]">GSTIN: {gstin}</p>
+          <h4 className="text-sm font-semibold text-white">{businessName}</h4>
+          <p className="text-xs text-slate-300">{ownerName} &middot; {city}</p>
+          <p className="text-xs text-slate-400 mt-1">GSTIN: {gstin}</p>
         </div>
         <div className="text-right">
           {grade && (
-            <p className={`text-lg font-bold ${gradeColors[grade] || "text-[#94A3B8]"}`}>
+            <p className={`text-lg font-bold ${gradeColors[grade] || "text-slate-300"}`}>
               {grade}
             </p>
           )}
           {score !== null && (
-            <p className="text-xs text-[#94A3B8]">{score}/100</p>
+            <p className="text-xs text-slate-400">{score}/100</p>
           )}
         </div>
       </div>
       {outcome && (
         <div className="mt-3">
           <span
-            className={`rounded-full px-2 py-0.5 text-xs ${
-              outcomeStyles[outcome] || "text-[#94A3B8] bg-[#1E1E2E]"
+            className={`rounded-full px-2.5 py-1 text-xs font-medium ${
+              outcomeStyles[outcome] || "text-slate-300 bg-[#1E1E2E]"
             }`}
           >
             {outcome}

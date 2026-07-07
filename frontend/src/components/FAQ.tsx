@@ -59,7 +59,7 @@ export default function FAQ() {
             return (
               <div
                 key={i}
-                className="border-b transition-all duration-200"
+                className="border-b transition-all duration-300 hover:bg-[#0E0F1A]/30"
                 style={{
                   borderColor: "#1C1D2E",
                   borderLeft: isOpen ? "3px solid #00C9A7" : "3px solid transparent",
@@ -67,16 +67,16 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between px-5 py-5 text-left text-base font-medium transition-colors md:px-6"
+                  className="flex w-full items-center justify-between px-5 py-5 text-left text-base font-medium transition-colors md:px-6 hover:text-white focus:outline-none focus:ring-1 focus:ring-[#00C9A7]/50 rounded-r"
                   style={{
-                    color: "#F0F2FF",
+                    color: isOpen ? "#FFFFFF" : "#E2E8F0",
                     fontFamily: "'Inter', sans-serif",
                     fontWeight: 500,
                   }}
                 >
                   <span>{faq.q}</span>
                   <span
-                    className="ml-4 flex h-6 w-6 shrink-0 items-center justify-center text-sm font-bold transition-transform duration-200"
+                    className="ml-4 flex h-6 w-6 shrink-0 items-center justify-center text-lg font-bold transition-transform duration-300"
                     style={{
                       color: "#00C9A7",
                       transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
@@ -95,9 +95,8 @@ export default function FAQ() {
                       className="overflow-hidden"
                     >
                       <p
-                        className="px-5 pb-6 text-[15px] leading-relaxed md:px-6"
+                        className="px-5 pb-6 text-[15px] leading-relaxed text-slate-300 md:px-6"
                         style={{
-                          color: "#8B8FA8",
                           fontFamily: "'Inter', sans-serif",
                           lineHeight: 1.7,
                         }}

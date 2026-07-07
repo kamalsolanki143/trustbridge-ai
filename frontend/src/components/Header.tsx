@@ -15,13 +15,13 @@ export default function Header() {
         }}
       />
       <div className="relative mx-auto flex h-full max-w-7xl items-center justify-between px-6">
-        <span className="font-mono text-xs tracking-wide" style={{ color: "#4A4D6A" }}>
+        <span className="font-mono text-xs tracking-wide text-slate-400">
           🏦 IDBI Bank
         </span>
-        <span className="font-mono text-xs tracking-wide" style={{ color: "#8B8FA8" }}>
+        <span className="font-mono text-xs tracking-wide text-slate-300">
           ✦ IDBI Innovate 2026 — Track 03: Financial Inclusion ✦
         </span>
-        <span className="font-mono text-xs tracking-wide" style={{ color: "#4A4D6A" }}>
+        <span className="font-mono text-xs tracking-wide text-slate-400">
           National Fintech Hackathon
         </span>
       </div>

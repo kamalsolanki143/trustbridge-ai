@@ -49,10 +49,10 @@ export default function Sidebar({ role }: SidebarProps) {
             <Link
               key={link.href}
               href={link.href}
-              className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition-colors ${
+              className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-all duration-300 ${
                 isActive
-                  ? "bg-[#6366F1]/10 text-[#6366F1]"
-                  : "text-[#94A3B8] hover:bg-[#12121A] hover:text-[#F8FAFC]"
+                  ? "bg-[#00C9A7]/10 text-[#00C9A7] font-semibold border-l-2 border-[#00C9A7]"
+                  : "text-slate-400 hover:bg-[#12121A] hover:text-white"
               }`}
             >
               <span>{link.icon}</span>

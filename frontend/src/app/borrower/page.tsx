@@ -51,31 +51,31 @@ export default function BorrowerDashboard() {
   return (
     <div className="flex min-h-screen flex-col bg-[#0A0A0F]">
       <Navbar role="borrower" />
-      <main className="flex-1 px-6 py-8">
+      <main className="flex-1 px-6 py-10">
         <div className="mx-auto max-w-3xl">
-          <div className="mb-8">
-            <h1 className="text-2xl font-bold text-[#F8FAFC]">Borrower Dashboard</h1>
-            <p className="mt-1 text-sm text-[#94A3B8]">
+          <div className="mb-10">
+            <h1 className="text-3xl font-bold text-white tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Borrower Dashboard</h1>
+            <p className="mt-2 text-sm text-slate-300">
               Check your credit readiness, give consent, and see your growth roadmap
             </p>
           </div>
 
-          <div className="mb-8 rounded-lg border border-[#1E1E2E] bg-[#12121A] p-6">
-            <h2 className="text-sm font-medium text-[#F8FAFC]">Start Your Assessment</h2>
-            <p className="mt-1 text-xs text-[#94A3B8]">
+          <div className="mb-10 rounded-xl border border-[#1E1E2E] bg-[#12121A] p-8 shadow-md">
+            <h2 className="text-base font-semibold text-white">Start Your Assessment</h2>
+            <p className="mt-1.5 text-xs text-slate-400">
               Enter your GSTIN to begin the credit readiness process
             </p>
-            <div className="mt-4 flex gap-3">
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row">
               <input
                 value={gstinInput}
                 onChange={(e) => setGstinInput(e.target.value)}
                 placeholder="Enter GSTIN (e.g., 19AABCS1429B1ZX)"
-                className="flex-1 rounded-lg border border-[#1E1E2E] bg-[#0A0A0F] px-4 py-2.5 text-sm text-[#F8FAFC] placeholder-[#4A4A5A] outline-none focus:border-[#6366F1]"
+                className="flex-1 rounded-lg border border-[#1E1E2E] bg-[#0A0A0F] px-4 py-3 text-sm text-white placeholder-[#5A5B6E] outline-none focus:border-[#00C9A7] focus:ring-2 focus:ring-[#00C9A7]/20 transition-all duration-300"
               />
               <button
                 onClick={handleStart}
                 disabled={!gstinInput}
-                className="rounded-lg bg-[#6366F1] px-6 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+                className="rounded-lg bg-[#00C9A7] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:opacity-90 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Continue
               </button>
@@ -83,8 +83,8 @@ export default function BorrowerDashboard() {
           </div>
 
           <div>
-            <h2 className="mb-3 text-sm font-medium text-[#F8FAFC]">Sample Profiles</h2>
-            <div className="space-y-3">
+            <h2 className="mb-4 text-base font-semibold text-white">Sample Profiles</h2>
+            <div className="space-y-4">
               {sampleMSMEs.map((msme) => (
                 <ApplicantCard
                   key={msme.id}

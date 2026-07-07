@@ -51,7 +51,7 @@ function CounterStat({ value, label, suffix = "" }: { value: number; label: stri
       <span className="text-4xl font-bold tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#00C9A7", fontSize: "36px" }}>
         {display}
       </span>
-      <span className="mt-1 text-center text-xs leading-relaxed" style={{ color: "#4A4D6A", fontFamily: "'Inter', sans-serif" }}>
+      <span className="mt-1 text-center text-xs leading-relaxed text-slate-400" style={{ fontFamily: "'Inter', sans-serif" }}>
         {label}
       </span>
     </div>
@@ -77,7 +77,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative min-h-screen overflow-hidden"
+      className="relative min-h-screen overflow-hidden py-12"
       style={{ backgroundColor: "#07080F" }}
     >
       <div
@@ -98,7 +98,7 @@ export default function Hero() {
         style={{ background: "radial-gradient(circle, #6366F1 0%, transparent 70%)" }}
       />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-24 md:pt-32">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-28 md:pt-36">
         <motion.div
           className="mx-auto max-w-[900px] text-center"
           variants={stagger}
@@ -126,8 +126,8 @@ export default function Hero() {
 
           <motion.p
             variants={fadeUp}
-            className="mx-auto mt-6 max-w-[600px] text-lg leading-relaxed"
-            style={{ color: "#8B8FA8", fontFamily: "'Inter', sans-serif" }}
+            className="mx-auto mt-6 max-w-[600px] text-lg leading-relaxed text-slate-300"
+            style={{ fontFamily: "'Inter', sans-serif" }}
           >
             TrustBridge AI converts GST filings, UPI transactions, and bank data into an explainable credit readiness profile — helping IDBI Bank say yes to MSMEs that deserve it.
           </motion.p>
@@ -135,7 +135,7 @@ export default function Hero() {
           <motion.div variants={fadeUp} className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href="/borrower"
-              className="group relative px-8 py-4 text-[15px] font-semibold text-white transition-all duration-200"
+              className="group relative rounded px-8 py-4 text-[15px] font-semibold text-white transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
               style={{
                 backgroundColor: "#00C9A7",
                 fontFamily: "'Space Grotesk', sans-serif",
@@ -152,7 +152,7 @@ export default function Hero() {
             </a>
             <a
               href="/lender"
-              className="px-8 py-4 text-[15px] font-semibold transition-all duration-200"
+              className="rounded px-8 py-4 text-[15px] font-semibold transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
               style={{
                 border: "1px solid #2A2B40",
                 color: "#F0F2FF",
@@ -171,14 +171,14 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          <motion.div variants={fadeUp} className="mt-6 flex items-center justify-center gap-4">
+          <motion.div variants={fadeUp} className="mt-8 flex items-center justify-center gap-4">
             {[
               "🏦 IDBI Bank Partner",
               "🔒 RBI AA Framework",
               "⚡ 10-Second Assessment",
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2">
-                <span className="font-mono text-xs" style={{ color: "#4A4D6A" }}>
+                <span className="font-mono text-xs text-slate-400">
                   {item}
                 </span>
                 {i < 2 && <span style={{ color: "#1C1D2E" }}>|</span>}
@@ -188,7 +188,7 @@ export default function Hero() {
 
           <motion.div
             variants={fadeUp}
-            className="mt-10 flex items-center justify-center gap-0 border border-[#1C1D2E] py-6"
+            className="mt-12 flex items-center justify-center gap-0 border border-[#1C1D2E] py-6 rounded-lg"
             style={{ backgroundColor: "#0E0F1A" }}
           >
             <CounterStat value={63000000} label="MSMEs in India" />
@@ -202,7 +202,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" as const }}
-          className="mx-auto mt-16 max-w-[640px]"
+          className="mx-auto mt-20 max-w-[640px] rounded-xl overflow-hidden"
           style={{
             border: "1px solid",
             borderColor: "#00C9A730",
@@ -236,7 +236,7 @@ export default function Hero() {
                   { label: "Coverage", value: "100%" },
                 ].map((item) => (
                   <div key={item.label} className="text-center">
-                    <p className="font-mono text-xs" style={{ color: "#4A4D6A" }}>{item.label}</p>
+                    <p className="font-mono text-xs text-slate-400">{item.label}</p>
                     <p className="mt-1 text-lg font-bold tracking-tight" style={{ color: "#00C9A7", fontFamily: "'Space Grotesk', sans-serif" }}>
                       {item.value}
                     </p>
@@ -245,13 +245,13 @@ export default function Hero() {
               </div>
 
               <div className="mt-5">
-                <div className="flex justify-between text-xs" style={{ color: "#4A4D6A" }}>
+                <div className="flex justify-between text-xs text-slate-400">
                   <span>Readiness Score</span>
                   <span style={{ color: "#00C9A7" }}>81/100</span>
                 </div>
-                <div className="mt-1.5 h-2 w-full" style={{ backgroundColor: "#1C1D2E" }}>
+                <div className="mt-1.5 h-2 w-full rounded-full overflow-hidden" style={{ backgroundColor: "#1C1D2E" }}>
                   <motion.div
-                    className="h-full"
+                    className="h-full rounded-full"
                     style={{ backgroundColor: "#00C9A7" }}
                     initial={{ width: "0%" }}
                     animate={{ width: "81%" }}
@@ -266,7 +266,7 @@ export default function Hero() {
                   { icon: "✓", text: "GST Compliance 11/12", color: "#10B981" },
                   { icon: "⚡", text: "Seasonal Revenue Pattern", color: "#F59E0B" },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2 font-mono text-xs" style={{ color: "#8B8FA8" }}>
+                  <div key={i} className="flex items-center gap-2 font-mono text-xs text-slate-300">
                     <span style={{ color: item.color }}>{item.icon}</span>
                     {item.text}
                   </div>

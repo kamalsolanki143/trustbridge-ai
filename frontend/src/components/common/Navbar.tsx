@@ -20,10 +20,10 @@ export default function Navbar({ role }: NavbarProps) {
     <nav className="border-b border-[#1E1E2E] bg-[#0A0A0F] px-6 py-4">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <div className="flex items-center gap-8">
-          <Link href={`/${role}`} className="text-xl font-bold text-[#F8FAFC]">
-            TrustBridge <span className="text-[#6366F1]">AI</span>
+          <Link href={`/${role}`} className="text-xl font-bold text-white">
+            TrustBridge <span className="text-[#00C9A7]">AI</span>
           </Link>
-          <span className="rounded-full bg-[#1E1E2E] px-3 py-1 text-xs text-[#94A3B8]">
+          <span className="rounded-full bg-[#1E1E2E] px-3 py-1 text-xs text-slate-300">
             {roleLabels[role]}
           </span>
         </div>
@@ -56,8 +56,8 @@ function NavLink({ href, current, label }: { href: string; current: string; labe
   return (
     <Link
       href={href}
-      className={`text-sm transition-colors ${
-        isActive ? "text-[#6366F1]" : "text-[#94A3B8] hover:text-[#F8FAFC]"
+      className={`text-sm transition-all duration-300 ${
+        isActive ? "text-[#00C9A7] font-medium border-b-2 border-[#00C9A7]" : "text-slate-400 hover:text-white"
       }`}
     >
       {label}

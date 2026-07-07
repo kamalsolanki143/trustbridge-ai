@@ -27,7 +27,6 @@ const applicantDetail = {
 
 export default function ApplicationsPage() {
   const [loading, setLoading] = useState(true)
-  const [selectedId, setSelectedId] = useState<string | null>(null)
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 500)
@@ -49,82 +48,38 @@ export default function ApplicationsPage() {
   return (
     <div className="flex min-h-screen flex-col bg-[#0A0A0F]">
       <Navbar role="lender" />
-      <main className="flex-1 px-6 py-8">
-        <div className="mx-auto max-w-5xl">
-          <h1 className="mb-6 text-2xl font-bold text-[#F8FAFC]">Applications</h1>
+      <main className="flex-1 px-6 py-10">
+        <div className="mx-auto max-w-3xl">
+          <div className="mb-8">
+            <h1 className="text-3xl font-bold text-white tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+              Applications
+            </h1>
+            <p className="mt-1.5 text-sm text-slate-300">
+              Browse submitted MSME credit assessment applications
+            </p>
+          </div>
 
-          {!selectedId ? (
-            <div className="space-y-3">
-              {["Sharma Textile Works", "Patel Hardware Suppliers", "Khan Catering Services"].map(
-                (name, i) => (
-                  <button
-                    key={name}
-                    onClick={() => setSelectedId(`msme-${i + 1}`)}
-                    className="w-full text-left"
-                  >
-                    <ApplicantCard
-                      id={`msme-${i + 1}`}
-                      businessName={name}
-                      gstin={["19AABCS1429B1ZX", "24AAACP3415G1ZK", "27AAAFK2314H1ZM"][i]}
-                      ownerName={["Rajesh Sharma", "Amit Patel", "Imran Khan"][i]}
-                      city={["Kolkata", "Ahmedabad", "Mumbai"][i]}
-                      grade={["A-", "B", "C+"][i]}
-                      score={[81, 62, 41][i]}
-                      outcome={["Pre-Qualified", "Starter Loan", "Improve First"][i]}
-                    />
-                  </button>
-                )
-              )}
-            </div>
-          ) : (
-            <div>
-              <button
-                onClick={() => setSelectedId(null)}
-                className="mb-4 text-sm text-[#6366F1] transition-colors hover:text-[#818CF8]"
-              >
-                &larr; Back to applications
-              </button>
-
-              <div className="grid gap-6 lg:grid-cols-3">
-                <div className="flex flex-col items-center justify-center rounded-lg border border-[#1E1E2E] bg-[#12121A] p-6">
-                  <ReadinessGrade grade={applicantDetail.grade} score={applicantDetail.score} size="lg" />
-                  <div className="mt-4">
-                    <ConfidenceBand band={applicantDetail.confidence} />
-                  </div>
-                </div>
-
-                <div className="lg:col-span-2 space-y-4">
-                  <div className="rounded-lg border border-[#1E1E2E] bg-[#12121A] p-5">
-                    <h3 className="mb-2 text-sm font-medium text-[#F8FAFC]">{applicantDetail.business_name}</h3>
-                    <div className="space-y-1 text-xs text-[#94A3B8]">
-                      <p>GSTIN: {applicantDetail.gstin}</p>
-                      <p>Owner: {applicantDetail.owner_name}</p>
-                      <p>Location: {applicantDetail.city}</p>
-                    </div>
-                  </div>
-
-                  <RecommendationCard
-                    assessment={{
-                      msme_id: applicantDetail.id,
-                      business_name: applicantDetail.business_name,
-                      readiness_grade: applicantDetail.grade,
-                      score: applicantDetail.score,
-                      confidence_band: applicantDetail.confidence,
-                      coverage_meter: { connected: 5, total: 5, percentage: 100 },
-                      sub_scores: [],
-                      risk_signals: applicantDetail.risk_signals,
-                      reason_codes: [],
-                      credit_ladder_outcome: applicantDetail.outcome,
-                      ai_summary: null,
-                      created_at: new Date().toISOString(),
-                    }}
-                  />
-
-                  <RiskSignals signals={applicantDetail.risk_signals} />
-                </div>
-              </div>
-            </div>
-          )}
+          <div className="space-y-4">
+            {[
+              { name: "Sharma Textile Works", gstin: "19AABCS1429B1ZX", owner: "Rajesh Sharma", city: "Kolkata", grade: "A-", score: 81, outcome: "Pre-Qualified" },
+              { name: "Patel Hardware Suppliers", gstin: "24AAACP3415G1ZK", owner: "Amit Patel", city: "Ahmedabad", grade: "B", score: 62, outcome: "Starter Loan" },
+              { name: "Khan Catering Services", gstin: "27AAAFK2314H1ZM", owner: "Imran Khan", city: "Mumbai", grade: "C+", score: 41, outcome: "Improve First" },
+              { name: "Desai Electronics", gstin: "27AAACD1234E1ZX", owner: "Priya Desai", city: "Pune", grade: "B", score: 65, outcome: "Starter Loan" },
+              { name: "Singh Logistics", gstin: "09AAACS5678L1ZT", owner: "Gurpreet Singh", city: "Delhi", grade: "A", score: 85, outcome: "Pre-Qualified" }
+            ].map((app, i) => (
+              <ApplicantCard
+                key={app.gstin}
+                id={`msme-${i + 1}`}
+                businessName={app.name}
+                gstin={app.gstin}
+                ownerName={app.owner}
+                city={app.city}
+                grade={app.grade}
+                score={app.score}
+                outcome={app.outcome}
+              />
+            ))}
+          </div>
         </div>
       </main>
       <Footer />

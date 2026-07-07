@@ -1,4 +1,4 @@
-// File: /Users/krrishyaduka/Documents/TrustBridge AI/frontend/src/app/layout.tsx
+// File: D:\Kamal Solanki\PROJECT\IBDI\trustbridge-ai\frontend\src\app\layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
