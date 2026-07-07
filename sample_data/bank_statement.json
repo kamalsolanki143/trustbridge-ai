@@ -1,0 +1,62 @@
+{
+  "19AABCS1429B1ZX": {
+    "business_name": "Sharma Textile Works",
+    "account_number": "912345678901",
+    "ifsc": "SBIN0001234",
+    "bank_name": "State Bank of India",
+    "months_history": 12,
+    "avg_balance": 185000.0,
+    "balance_stability": "stable",
+    "emi_burden_percent": 22.0,
+    "bounced_payments": 0,
+    "statement_data": {
+      "recent_transactions": [
+        { "date": "2026-07-01", "description": "ACH DEBIT HDFC LOAN EMI", "amount": 15000.0, "type": "debit" },
+        { "date": "2026-07-02", "description": "INWARD IMPS TRUST CO", "amount": 45000.0, "type": "credit" },
+        { "date": "2026-07-03", "description": "UPI RECEIPT MERCH", "amount": 8000.0, "type": "credit" },
+        { "date": "2026-07-05", "description": "ATM CASH WITHDRAWAL", "amount": 10000.0, "type": "debit" }
+      ],
+      "monthly_average_balances": [178000, 182000, 185000, 190000, 184000, 189000, 192000, 180000, 188000, 182000, 186000, 185000]
+    }
+  },
+  "24AAACP3415G1ZK": {
+    "business_name": "Patel Hardware Suppliers",
+    "account_number": "911223344556",
+    "ifsc": "ICIC0000102",
+    "bank_name": "ICICI Bank",
+    "months_history": 10,
+    "avg_balance": 45000.0,
+    "balance_stability": "moderate",
+    "emi_burden_percent": 38.0,
+    "bounced_payments": 2,
+    "statement_data": {
+      "recent_transactions": [
+        { "date": "2026-07-01", "description": "ACH DEBIT ICICI EMI", "amount": 18000.0, "type": "debit" },
+        { "date": "2026-07-02", "description": "BOUNCE CHG - INSUF BAL", "amount": 295.0, "type": "debit" },
+        { "date": "2026-07-04", "description": "UPI TRANSFER OUT", "amount": 12000.0, "type": "debit" },
+        { "date": "2026-07-05", "description": "CASH DEPOSIT SELF", "amount": 20000.0, "type": "credit" }
+      ],
+      "monthly_average_balances": [35000, 39000, 48000, 42000, 40000, 47000, 52000, 31000, 45000, 49000]
+    }
+  },
+  "27AAAFK2314H1ZM": {
+    "business_name": "Khan Catering Services",
+    "account_number": "919988776655",
+    "ifsc": "HDFC0000240",
+    "bank_name": "HDFC Bank",
+    "months_history": 6,
+    "avg_balance": 12000.0,
+    "balance_stability": "volatile",
+    "emi_burden_percent": 51.0,
+    "bounced_payments": 4,
+    "statement_data": {
+      "recent_transactions": [
+        { "date": "2026-07-01", "description": "ACH DEBIT KOTAK EMI", "amount": 22000.0, "type": "debit" },
+        { "date": "2026-07-02", "description": "BOUNCE CHG - INSUF BAL", "amount": 295.0, "type": "debit" },
+        { "date": "2026-07-03", "description": "BOUNCE CHG - INSUF BAL", "amount": 295.0, "type": "debit" },
+        { "date": "2026-07-04", "description": "UPI INFLOW EVENT REC", "amount": 15000.0, "type": "credit" }
+      ],
+      "monthly_average_balances": [15000, 8000, 22000, 11000, 6000, 12000]
+    }
+  }
+}

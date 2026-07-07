@@ -1,0 +1,44 @@
+{
+  "19AABCS1429B1ZX": {
+    "business_name": "Sharma Textile Works",
+    "owner_name": "Rajesh Sharma",
+    "business_type": "Textile Manufacturing",
+    "years_in_business": 8.0,
+    "employee_count": 12,
+    "employee_delta_6m": 3,
+    "description": "Textile manufacturing with B2B contracts across West Bengal. Operating multiple power looms with expanding export volumes.",
+    "address": "42 Industrial Area, Sector 5",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "email": "rajesh@sharmatextiles.in",
+    "phone": "+91-9876543210"
+  },
+  "24AAACP3415G1ZK": {
+    "business_name": "Patel Hardware Suppliers",
+    "owner_name": "Amit Patel",
+    "business_type": "Hardware Wholesale",
+    "years_in_business": 5.0,
+    "employee_count": 5,
+    "employee_delta_6m": 1,
+    "description": "Hardware wholesale supplier serving retail stores in Gujarat. Established retail network with stable customer accounts.",
+    "address": "7, Gandhi Nagar Market",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "email": "amit@patelhardware.in",
+    "phone": "+91-9876543211"
+  },
+  "27AAAFK2314H1ZM": {
+    "business_name": "Khan Catering Services",
+    "owner_name": "Imran Khan",
+    "business_type": "Food & Catering",
+    "years_in_business": 2.0,
+    "employee_count": 0,
+    "employee_delta_6m": 0,
+    "description": "Catering services for events and parties in Mumbai. Operating as a micro-business with contractor-based staffing.",
+    "address": "15, Hill Road, Bandra West",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "email": "imran@khancatering.in",
+    "phone": "+91-9876543212"
+  }
+}

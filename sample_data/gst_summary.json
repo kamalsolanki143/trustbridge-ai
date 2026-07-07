@@ -1,0 +1,68 @@
+{
+  "19AABCS1429B1ZX": {
+    "business_name": "Sharma Textile Works",
+    "gstin": "19AABCS1429B1ZX",
+    "months_filed": 11,
+    "total_months": 12,
+    "turnover_annual": 4200000.0,
+    "turnover_trend_percent": 18.0,
+    "filings": [
+      { "month": "July 2025", "filed_date": "2025-08-15", "status": "filed" },
+      { "month": "August 2025", "filed_date": "2025-09-12", "status": "filed" },
+      { "month": "September 2025", "filed_date": "2025-10-18", "status": "filed" },
+      { "month": "October 2025", "filed_date": "2025-11-15", "status": "filed" },
+      { "month": "November 2025", "filed_date": "2025-12-14", "status": "filed" },
+      { "month": "December 2025", "filed_date": "2026-01-20", "status": "filed" },
+      { "month": "January 2026", "filed_date": "2026-02-17", "status": "filed" },
+      { "month": "February 2026", "filed_date": "2026-03-19", "status": "filed" },
+      { "month": "March 2026", "filed_date": "2026-04-18", "status": "filed" },
+      { "month": "April 2026", "filed_date": "2026-05-15", "status": "filed" },
+      { "month": "May 2026", "filed_date": "2026-06-16", "status": "filed" },
+      { "month": "June 2026", "filed_date": null, "status": "pending" }
+    ]
+  },
+  "24AAACP3415G1ZK": {
+    "business_name": "Patel Hardware Suppliers",
+    "gstin": "24AAACP3415G1ZK",
+    "months_filed": 9,
+    "total_months": 12,
+    "turnover_annual": 1800000.0,
+    "turnover_trend_percent": 0.0,
+    "filings": [
+      { "month": "July 2025", "filed_date": "2025-08-20", "status": "filed" },
+      { "month": "August 2025", "filed_date": "2025-09-22", "status": "filed" },
+      { "month": "September 2025", "filed_date": "2025-10-25", "status": "filed" },
+      { "month": "October 2025", "filed_date": null, "status": "missed" },
+      { "month": "November 2025", "filed_date": "2025-12-20", "status": "filed" },
+      { "month": "December 2025", "filed_date": "2026-01-22", "status": "filed" },
+      { "month": "January 2026", "filed_date": "2026-02-21", "status": "filed" },
+      { "month": "February 2026", "filed_date": null, "status": "missed" },
+      { "month": "March 2026", "filed_date": "2026-04-20", "status": "filed" },
+      { "month": "April 2026", "filed_date": "2026-05-22", "status": "filed" },
+      { "month": "May 2026", "filed_date": "2026-06-21", "status": "filed" },
+      { "month": "June 2026", "filed_date": null, "status": "missed" }
+    ]
+  },
+  "27AAAFK2314H1ZM": {
+    "business_name": "Khan Catering Services",
+    "gstin": "27AAAFK2314H1ZM",
+    "months_filed": 6,
+    "total_months": 12,
+    "turnover_annual": 800000.0,
+    "turnover_trend_percent": -15.0,
+    "filings": [
+      { "month": "July 2025", "filed_date": null, "status": "missed" },
+      { "month": "August 2025", "filed_date": "2025-09-30", "status": "filed" },
+      { "month": "September 2025", "filed_date": null, "status": "missed" },
+      { "month": "October 2025", "filed_date": "2025-11-28", "status": "filed" },
+      { "month": "November 2025", "filed_date": null, "status": "missed" },
+      { "month": "December 2025", "filed_date": "2026-01-29", "status": "filed" },
+      { "month": "January 2026", "filed_date": null, "status": "missed" },
+      { "month": "February 2026", "filed_date": "2026-03-28", "status": "filed" },
+      { "month": "March 2026", "filed_date": null, "status": "missed" },
+      { "month": "April 2026", "filed_date": "2026-04-30", "status": "filed" },
+      { "month": "May 2026", "filed_date": null, "status": "missed" },
+      { "month": "June 2026", "filed_date": "2026-06-29", "status": "filed" }
+    ]
+  }
+}

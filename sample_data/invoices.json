@@ -1,0 +1,38 @@
+{
+  "19AABCS1429B1ZX": {
+    "business_name": "Sharma Textile Works",
+    "total_invoices": 156,
+    "total_value": 3800000.0,
+    "avg_value": 24359.0,
+    "pending_percent": 5.0,
+    "recent_invoices": [
+      { "invoice_id": "INV-2026-001", "buyer": "Kolkata Retail Hub", "amount": 45000.0, "status": "paid", "due_days": 30 },
+      { "invoice_id": "INV-2026-002", "buyer": "Bengal Garments", "amount": 80000.0, "status": "paid", "due_days": 30 },
+      { "invoice_id": "INV-2026-003", "buyer": "Eastern Threads", "amount": 25000.0, "status": "pending", "due_days": 15 }
+    ]
+  },
+  "24AAACP3415G1ZK": {
+    "business_name": "Patel Hardware Suppliers",
+    "total_invoices": 48,
+    "total_value": 1200000.0,
+    "avg_value": 25000.0,
+    "pending_percent": 18.0,
+    "recent_invoices": [
+      { "invoice_id": "INV-2026-A10", "buyer": "Ahmedabad Builders", "amount": 50000.0, "status": "paid", "due_days": 45 },
+      { "invoice_id": "INV-2026-A11", "buyer": "Baroda Iron Mart", "amount": 65000.0, "status": "pending", "due_days": 60 },
+      { "invoice_id": "INV-2026-A12", "buyer": "Gujarat Tools", "amount": 30000.0, "status": "pending", "due_days": 90 }
+    ]
+  },
+  "27AAAFK2314H1ZM": {
+    "business_name": "Khan Catering Services",
+    "total_invoices": 10,
+    "total_value": 200000.0,
+    "avg_value": 20000.0,
+    "pending_percent": 30.0,
+    "recent_invoices": [
+      { "invoice_id": "INV-2026-C01", "buyer": "Royal Weddings Mumbai", "amount": 80000.0, "status": "paid", "due_days": 15 },
+      { "invoice_id": "INV-2026-C02", "buyer": "Bandra Corporate Events", "amount": 50000.0, "status": "pending", "due_days": 45 },
+      { "invoice_id": "INV-2026-C03", "buyer": "Local Party Planner", "amount": 70000.0, "status": "pending", "due_days": 60 }
+    ]
+  }
+}

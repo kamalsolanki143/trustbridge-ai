@@ -2,6 +2,7 @@ import datetime
 import pytest
 from httpx import AsyncClient
 from sqlalchemy.ext.asyncio import AsyncSession
+from app.services.consent_trace import consent_tracker
 from app.models import Consent, ConsentAuditLog
 
 @pytest.mark.asyncio
@@ -35,7 +36,7 @@ async def test_consent_lifecycle_and_audit(client: AsyncClient, db_session: Asyn
     assert grant_data["data_source"] == "bank_statements"
     assert grant_data["purpose"] == "Cash Flow Stability Assessment"
 
-    # Try granting for a non-existent borrower ID
+    # Try granting for a non-existent borrower ID (should fail 404)
     invalid_grant = grant_payload.copy()
     invalid_grant["borrower_id"] = "borrower_invalid"
     invalid_res = await client.post("/api/v1/consent/grant", json=invalid_grant)
@@ -60,7 +61,7 @@ async def test_consent_lifecycle_and_audit(client: AsyncClient, db_session: Asyn
     assert revoke_data["status"] == "revoked"
     assert revoke_data["revoked_at"] is not None
 
-    # Try revoking again (no longer active)
+    # Try revoking again (no longer active, should fail 404)
     revoke_res_again = await client.post("/api/v1/consent/revoke", json=revoke_payload)
     assert revoke_res_again.status_code == 404
 
@@ -68,7 +69,6 @@ async def test_consent_lifecycle_and_audit(client: AsyncClient, db_session: Asyn
     trace_res = await client.get("/api/v1/consent/borrower_test_consent/trace")
     assert trace_res.status_code == 200
     trace_log = trace_res.json()
-    # Should have a 'grant' action and a 'revoke' action in audit log
     actions = [log["action"] for log in trace_log]
     assert "grant" in actions
     assert "revoke" in actions
@@ -111,3 +111,54 @@ async def test_consent_auto_expiration(client: AsyncClient, db_session: AsyncSes
     trace_log = trace_res.json()
     actions = [log["action"] for log in trace_log]
     assert "expire" in actions
+
+@pytest.mark.asyncio
+async def test_consent_usage_and_purpose_limitations(client: AsyncClient, db_session: AsyncSession):
+    # 1. Create a borrower
+    borrower_payload = {
+        "id": "borrower_usage_limits",
+        "name": "Rahul Gandhi",
+        "business_name": "RG Innovations",
+        "pan": "JKLMN1234P",
+        "gstin": "27JKLMN1234P1Z3",
+        "email": "rahul@rg.com",
+        "phone": "+919876543244"
+    }
+    await client.post("/api/v1/borrower", json=borrower_payload)
+
+    # 2. Try recording usage when no consent exists (should return False)
+    authorized = await consent_tracker.record_consent_usage(
+        db=db_session,
+        borrower_id="borrower_usage_limits",
+        data_source="bank_statements",
+        intended_purpose="Cash Flow Stability Assessment"
+    )
+    assert not authorized
+
+    # 3. Grant valid consent
+    expiry_time = datetime.datetime.utcnow() + datetime.timedelta(days=10)
+    await consent_tracker.record_consent_grant(
+        db=db_session,
+        borrower_id="borrower_usage_limits",
+        data_source="bank_statements",
+        scope="read",
+        expiry=expiry_time
+    )
+
+    # 4. Try recording usage for a mismatched purpose (purpose limitation violation)
+    authorized_mismatch = await consent_tracker.record_consent_usage(
+        db=db_session,
+        borrower_id="borrower_usage_limits",
+        data_source="bank_statements",
+        intended_purpose="Mismatched marketing collection purpose"
+    )
+    assert not authorized_mismatch
+
+    # 5. Record usage for matching canonical purpose (should return True)
+    authorized_match = await consent_tracker.record_consent_usage(
+        db=db_session,
+        borrower_id="borrower_usage_limits",
+        data_source="bank_statements",
+        intended_purpose="Cash Flow Stability Assessment"
+    )
+    assert authorized_match
