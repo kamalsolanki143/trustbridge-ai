@@ -8,7 +8,7 @@ from app.schemas.borrower import BorrowerCreate, BorrowerResponse, BorrowerDashb
 from app.services._stubs import get_readiness_profile, get_ladder_decision, get_growth_roadmap
 from app.services.consent_trace import consent_tracker
 
-router = APIRouter(prefix="/borrower", tags=["Borrower Profile & Dashboard"])
+router = APIRouter(prefix="/borrower", tags=["Borrower"])
 
 @router.post("", response_model=BorrowerResponse, status_code=status.HTTP_201_CREATED)
 async def create_borrower(

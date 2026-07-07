@@ -13,7 +13,7 @@ from app.schemas.readiness import (
 )
 from app.services.readiness_engine.readiness_grade import compute_readiness
 
-router = APIRouter(prefix="/api/readiness", tags=["readiness"])
+router = APIRouter(prefix="/api/readiness", tags=["Credit Readiness"])
 
 
 @router.post("/assess", response_model=ReadinessResponse)

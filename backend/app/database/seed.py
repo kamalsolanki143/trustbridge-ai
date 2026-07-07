@@ -1,15 +1,28 @@
+import logging
+
 from sqlalchemy.orm import Session
-from app.database.models import (
-    MSME, DataSource, GSTRecord, UPIRecord, BankStatementRecord,
-    InvoiceRecord, BusinessProfile, ConsentRecord
-)
+
 from app.database.db import SessionLocal, init_db
+from app.database.models import (
+    BankStatementRecord, BusinessProfile, ConsentRecord, DataSource,
+    GSTRecord, InvoiceRecord, MSME, UPIRecord
+)
+
+logger = logging.getLogger("trustbridge")
 
 
 def seed_database():
     init_db()
     db = SessionLocal()
     try:
+        gstins = ["19AABCS1429B1ZX", "24AAACP3415G1ZK", "27AAAFK2314H1ZM"]
+        existing = db.query(MSME).filter(MSME.gstin.in_(gstins)).first()
+        if existing:
+            msg = "Sample data already exists. Skipping seed."
+            print(msg)
+            logger.info(msg)
+            return
+
         _seed_msme_1(db)
         _seed_msme_2(db)
         _seed_msme_3(db)

@@ -8,7 +8,7 @@ from app.db import get_db
 from app.models import ManualReview, LenderDecision
 from app.schemas.recommendation import ManualReviewResponse, ManualReviewResolveRequest
 
-router = APIRouter(prefix="/manual-review", tags=["Manual Review Queue"])
+router = APIRouter(prefix="/manual-review", tags=["Manual Review"])
 
 @router.get("/queue", response_model=List[ManualReviewResponse])
 async def get_queue(

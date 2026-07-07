@@ -7,7 +7,7 @@ from app.models import Borrower, LenderPolicy
 from app.schemas.recommendation import LadderDecision
 from app.services._stubs import get_ladder_decision
 
-router = APIRouter(prefix="/ladder", tags=["Ladder Decision Engine"])
+router = APIRouter(prefix="/ladder", tags=["Credit Ladder"])
 
 @router.get("/{borrower_id}", response_model=LadderDecision)
 async def get_decision(

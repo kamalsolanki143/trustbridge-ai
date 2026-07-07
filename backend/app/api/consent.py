@@ -11,7 +11,7 @@ from app.schemas.consent import (
 )
 from app.services.consent_trace import consent_tracker
 
-router = APIRouter(prefix="/consent", tags=["Consent Management"])
+router = APIRouter(prefix="/consent", tags=["Consent"])
 
 @router.post("/grant", response_model=BorrowerConsentResponse, status_code=status.HTTP_201_CREATED)
 async def grant_consent(

@@ -6,7 +6,7 @@ from app.schemas.recommendation import ScenarioInput, ScenarioResult
 from app.services.outcome_simulator.simulator_engine import run_simulation
 from app.services.outcome_simulator.scenario_builder import get_predefined_scenarios
 
-router = APIRouter(prefix="/simulator", tags=["Credit Outcome Simulator"])
+router = APIRouter(prefix="/simulator", tags=["Simulator"])
 
 @router.post("/simulate", response_model=ScenarioResult, status_code=status.HTTP_200_OK)
 def simulate_scenario(

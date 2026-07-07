@@ -8,7 +8,7 @@ from app.models import Borrower
 from app.schemas.recommendation import TrustSummaryResponse
 from app.services.trust_summary import summary_generator, pdf_export
 
-router = APIRouter(prefix="/trust-summary", tags=["Underwriting Trust Summary"])
+router = APIRouter(prefix="/trust-summary", tags=["Trust Summary"])
 
 @router.post("/generate/{borrower_id}", response_model=TrustSummaryResponse, status_code=status.HTTP_201_CREATED)
 async def generate_summary(

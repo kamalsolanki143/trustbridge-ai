@@ -1,5 +1,6 @@
 import datetime
-from typing import List, Dict, Any
+from typing import List
+
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -15,7 +16,7 @@ from app.schemas.recommendation import (
 )
 from app.services._stubs import get_readiness_profile, get_ladder_decision
 
-router = APIRouter(prefix="/lender", tags=["Lender Actions & Settings"])
+router = APIRouter(prefix="/lender", tags=["Lender"])
 
 @router.get("/applications", response_model=List[LenderApplicationResponse])
 async def list_applications(
