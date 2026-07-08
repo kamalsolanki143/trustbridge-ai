@@ -177,18 +177,6 @@ https://trustbridge-ai-production.up.railway.app/docs
 
 ---
 
-# 📸 Screenshots
-
-(Add homepage screenshots)
-
-(Add lender dashboard)
-
-(Add borrower dashboard)
-
-(Add API docs)
-
----
-
 # 🎥 Demo Video
 
 (Add YouTube Link)
@@ -204,8 +192,6 @@ https://trustbridge-ai-production.up.railway.app/docs
 - Bank Integration
 
 ---
-
-# 👥 Team – Compass Crew
 
 ## 👑 Kamal Solanki
 ### Team Leader | Product Lead | AI Strategy & Documentation Lead
@@ -312,6 +298,15 @@ https://trustbridge-ai-production.up.railway.app/docs
 # 🏆 Built For
 
 IDBI Hackathon
+
+---
+
+## 👥 Team
+
+**Compass Crew**
+
+Building AI-powered solutions for financial inclusion, responsible lending, and explainable intelligence.
+# 👥 Team – Compass Crew
 
 ---
 
