@@ -205,34 +205,108 @@ https://trustbridge-ai-production.up.railway.app/docs
 
 ---
 
-# 👥 Team
+# 👥 Team – Compass Crew
 
-### Kamal Solanki
+## 👑 Kamal Solanki
+### Team Leader | Product Lead | AI Strategy & Documentation Lead
 
-Team Lead
+**Responsibilities**
+- Project Vision & Direction
+- Problem Statement Mapping
+- Credit Ladder Logic Design
+- AI Workflow Design
+- Feature Prioritization
+- README & Technical Documentation
+- Pitch Storytelling
+- Demo Strategy
+- Team Coordination
+- Final Submission
+- Deployment (Railway & Vercel)
 
-AI • Backend • Deployment
+**Key Contributions**
+- Credit Ladder Engine Logic
+- Outcome Simulator Logic
+- AI Workflow Design
+- Documentation
+- Pitch Deck Content
+- Deployment & Integration
 
 ---
 
-### Krishna
+## 💻 Muskan Yeshmin Ali
+### Backend Lead | Presentation Lead
 
-Full Stack Development
+**Responsibilities**
+- FastAPI Backend Development
+- Trust Summary APIs
+- Consent Trace APIs
+- Recommendation Engine Integration
+- Backend Business Logic
+- API Testing
+- Final Presentation (PPT)
+
+**Key Contributions**
+- `backend/app/api/trust_summary.py`
+- `backend/app/api/ladder_engine.py`
+- `backend/app/api/consent.py`
+- `backend/app/api/manual_review.py`
+- Hackathon Presentation
 
 ---
 
-### Krrish Yaduka
+## ⚡ Krrish Yaduka
+### Full Stack Lead | Demo Video Lead
 
-Frontend Development
+**Responsibilities**
+- Next.js Frontend
+- Backend API Development
+- PostgreSQL Database
+- API Integration
+- Dashboard Development
+- Charts & Visualizations
+- Final Demo Video
+
+**Key Contributions**
+
+**Frontend**
+- Borrower Dashboard
+- Lender Dashboard
+- Consent Flow UI
+- Outcome Simulator UI
+
+**Backend**
+- Credit Readiness API
+- Readiness Grade
+- Confidence Band
+- Coverage Meter
+- Risk Signals
+
+**Database**
+- PostgreSQL
+- Models
+- Schemas
+- Seed Data
 
 ---
 
-### Muskan Yeshmin Ali
+## 📊 Saloni Nautiyal
+### Research, Testing & Presentation Support Lead
 
-UI/UX Design
+**Responsibilities**
+- Sample Dataset Creation
+- Testing & Quality Assurance
+- User Flow Validation
+- Presentation Support
+- Demo Scenario Preparation
+- Judge Q&A Research
 
-Presentation
-
+**Key Contributions**
+- `sample_data/`
+- Testing & QA
+- `docs/`
+- `pitch_notes.md`
+- `demo_script.md`
+- `future_roadmap.md`
 ---
 
 # 🏆 Built For
